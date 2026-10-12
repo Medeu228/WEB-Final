@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LingoUp — изучай английский легко и интересно">
+  <title>Практика — LingoUp</title>
+
+  <!-- Шрифты Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Основные стили -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Шапка сайта: логотип, меню и кнопка записи -->
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">🦉 LingoUp</a>
+
+      <!-- Бургер-меню для мобильных (работает на checkbox без JS) -->
+      <input class="burger-checkbox" type="checkbox" id="burger">
+      <label class="burger" for="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Главная</a></li>
+          <li><a class="nav-link" href="courses.html">Курсы</a></li>
+          <li><a class="nav-link" href="contacts.html">Контакты</a></li>
+          <li><a class="nav-link active" href="practice.html">Практика</a></li>
+        </ul>
+      </nav>
+
+      <a class="header-action" href="contacts.html">Записаться →</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Заголовок страницы -->
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow">📚 Учимся вместе</span>
+        <h1>Практика английского</h1>
+        <p>Повтори простые слова и проверь себя!</p>
+      </div>
+    </section>
+
+    <!-- Слова дня -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">5 слов на сегодня</h2>
+
+        <div class="steps">
+          <div class="step"><span>🍎</span><h3>Apple</h3><p>Яблоко</p></div>
+          <div class="step"><span>🐱</span><h3>Cat</h3><p>Кошка</p></div>
+          <div class="step"><span>📖</span><h3>Book</h3><p>Книга</p></div>
+          <div class="step"><span>🏠</span><h3>House</h3><p>Дом</p></div>
+          <div class="step"><span>💧</span><h3>Water</h3><p>Вода</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Самопроверка: ответ раскрывается по клику (без JS) -->
+    <section class="section section-light">
+      <div class="container">
+        <h2 class="section-title">Проверь себя</h2>
+        <p style="margin-bottom:24px">Попробуй перевести слово, а потом нажми на вопрос, чтобы увидеть ответ.</p>
+
+        <div class="faq">
+          <details>
+            <summary>1. Как переводится Apple?</summary>
+            <p>Apple — яблоко 🍎</p>
+          </details>
+          <details>
+            <summary>2. Как переводится Cat?</summary>
+            <p>Cat — кошка 🐱</p>
+          </details>
+          <details>
+            <summary>3. Как переводится Book?</summary>
+            <p>Book — книга 📖</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Совет и переход к курсам -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Совет для обучения</h2>
+        <p>Учи по 5 новых слов каждый день. Повторяй их вслух и составляй простые предложения.</p>
+        <p style="margin-top:22px"><a class="button" href="courses.html">Посмотреть курсы →</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Подвал сайта: описание, ссылки на страницы и контакты -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <a class="logo" href="index.html">🦉 LingoUp</a>
+        <p>Английский каждый день — маленькими шагами к большой цели.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Страницы</h3>
+        <a href="index.html">Главная</a>
+        <a href="courses.html">Курсы</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="practice.html">Практика</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Связаться</h3>
+        <a href="mailto:hello@lingoup.example">hello@lingoup.example</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://t.me/" target="_blank" rel="noopener noreferrer">Telegram</a>
+      </div>
+    </div>
+
+    <div class="container copyright">© 2026 LingoUp. Учебный проект. Контакты и цены демонстрационные.</div>
+  </footer>
+
+</body>
+
+</html>

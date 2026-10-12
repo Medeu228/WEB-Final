@@ -1,4 +1,163 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="LingoUp — изучай английский легко и интересно"><title>Контакты — LingoUp</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body>
-<header class="header"><div class="container header-inner"><a class="logo" href="index.html">🦉 LingoUp</a><input class="burger-checkbox" type="checkbox" id="burger"><label class="burger" for="burger" aria-label="Открыть меню"><span></span><span></span><span></span></label><nav class="nav" aria-label="Основная навигация"><ul class="nav-list"><li><a class="nav-link " href="index.html">Главная</a></li><li><a class="nav-link " href="courses.html">Курсы</a></li><li><a class="nav-link active" href="contacts.html">Контакты</a></li></ul></nav><a class="header-action" href="contacts.html">Записаться →</a></div></header>
-<main><section class="page-header"><div class="container"><span class="eyebrow">Мы рядом</span><h1>Начни учиться сегодня</h1><p>Оставь заявку или напиши нам, чтобы узнать больше о курсах.</p></div></section><section class="section"><div class="container contacts"><form class="contact-form" action="mailto:hello@lingoup.example" method="post" enctype="text/plain"><h2>Запись на курс</h2><p class="muted">Это демонстрационная форма: при отправке откроется почтовая программа.</p><div class="form-row"><div class="form-field"><label for="name">Имя</label><input id="name" name="name" type="text" placeholder="Ваше имя" required></div><div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div></div><div class="form-field"><label for="level">Интересующий уровень</label><select id="level" name="level"><option>A1 — Начальный</option><option>A2–B1 — Средний</option><option>B2–C1 — Продвинутый</option><option>Не знаю свой уровень</option></select></div><div class="form-field"><label for="message">Комментарий</label><textarea id="message" name="message" rows="5" placeholder="Расскажите о своей цели"></textarea></div><button class="button" type="submit">Отправить заявку →</button></form><aside class="contact-info"><div class="info-icon">💌</div><h2>Есть вопросы?</h2><p>Мы с радостью расскажем о формате занятий и поможем выбрать уровень.</p><h3>Электронная почта</h3><a href="mailto:hello@lingoup.example">hello@lingoup.example</a><h3>Социальные сети</h3><a href="https://instagram.com/">Instagram ↗</a><a href="https://t.me/">Telegram ↗</a><p class="muted">Контакты приведены для примера.</p></aside></div></section><section class="section section-light"><div class="container"><h2 class="section-title">Частые вопросы</h2><div class="faq"><details><summary>Подойдёт ли курс новичку?</summary><p>Да! Начни с уровня A1, даже если раньше не изучал английский.</p></details><details><summary>Сколько времени нужно уделять занятиям?</summary><p>Для начала достаточно 15–20 минут регулярной практики в день.</p></details><details><summary>Как выбрать подходящий уровень?</summary><p>Опиши свой опыт в форме, и мы поможем подобрать программу.</p></details></div></div></section></main>
-<footer class="footer"><div class="container footer-inner"><div class="footer-col"><a class="logo" href="index.html">🦉 LingoUp</a><p>Английский каждый день — маленькими шагами к большой цели.</p></div><div class="footer-col"><h3>Страницы</h3><a href="index.html">Главная</a><a href="courses.html">Курсы</a><a href="contacts.html">Контакты</a></div><div class="footer-col"><h3>Связаться</h3><a href="mailto:hello@lingoup.example">hello@lingoup.example</a><a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://t.me/" target="_blank" rel="noopener noreferrer">Telegram</a></div></div><div class="container copyright">© 2026 LingoUp. Учебный проект. Контакты и цены демонстрационные.</div></footer></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LingoUp — изучай английский легко и интересно">
+  <title>Контакты — LingoUp</title>
+
+  <!-- Шрифты Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Основные стили -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Шапка сайта: логотип, меню и кнопка записи -->
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">🦉 LingoUp</a>
+
+      <!-- Бургер-меню для мобильных (работает на checkbox без JS) -->
+      <input class="burger-checkbox" type="checkbox" id="burger">
+      <label class="burger" for="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Главная</a></li>
+          <li><a class="nav-link" href="courses.html">Курсы</a></li>
+          <li><a class="nav-link active" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <a class="header-action" href="contacts.html">Записаться →</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Заголовок страницы -->
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow">Мы рядом</span>
+        <h1>Начни учиться сегодня</h1>
+        <p>Оставь заявку или напиши нам, чтобы узнать больше о курсах.</p>
+      </div>
+    </section>
+
+    <!-- Форма заявки и контактная информация -->
+    <section class="section">
+      <div class="container contacts">
+
+        <!-- Демо-форма: отправка открывает почтовую программу -->
+        <form class="contact-form" action="mailto:hello@lingoup.example" method="post" enctype="text/plain">
+          <h2>Запись на курс</h2>
+          <p class="muted">Это демонстрационная форма: при отправке откроется почтовая программа.</p>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Имя</label>
+              <input id="name" name="name" type="text" placeholder="Ваше имя" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="level">Интересующий уровень</label>
+            <select id="level" name="level">
+              <option>A1 — Начальный</option>
+              <option>A2–B1 — Средний</option>
+              <option>B2–C1 — Продвинутый</option>
+              <option>Не знаю свой уровень</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Комментарий</label>
+            <textarea id="message" name="message" rows="5" placeholder="Расскажите о своей цели"></textarea>
+          </div>
+
+          <button class="button" type="submit">Отправить заявку →</button>
+        </form>
+
+        <!-- Боковая колонка с контактами -->
+        <aside class="contact-info">
+          <div class="info-icon">💌</div>
+          <h2>Есть вопросы?</h2>
+          <p>Мы с радостью расскажем о формате занятий и поможем выбрать уровень.</p>
+
+          <h3>Электронная почта</h3>
+          <a href="mailto:hello@lingoup.example">hello@lingoup.example</a>
+
+          <h3>Социальные сети</h3>
+          <a href="https://instagram.com/">Instagram ↗</a>
+          <a href="https://t.me/">Telegram ↗</a>
+
+          <p class="muted">Контакты приведены для примера.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Частые вопросы (раскрывающиеся блоки без JS) -->
+    <section class="section section-light">
+      <div class="container">
+        <h2 class="section-title">Частые вопросы</h2>
+
+        <div class="faq">
+          <details>
+            <summary>Подойдёт ли курс новичку?</summary>
+            <p>Да! Начни с уровня A1, даже если раньше не изучал английский.</p>
+          </details>
+          <details>
+            <summary>Сколько времени нужно уделять занятиям?</summary>
+            <p>Для начала достаточно 15–20 минут регулярной практики в день.</p>
+          </details>
+          <details>
+            <summary>Как выбрать подходящий уровень?</summary>
+            <p>Опиши свой опыт в форме, и мы поможем подобрать программу.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Подвал сайта: описание, ссылки на страницы и контакты -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <a class="logo" href="index.html">🦉 LingoUp</a>
+        <p>Английский каждый день — маленькими шагами к большой цели.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Страницы</h3>
+        <a href="index.html">Главная</a>
+        <a href="courses.html">Курсы</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Связаться</h3>
+        <a href="mailto:hello@lingoup.example">hello@lingoup.example</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://t.me/" target="_blank" rel="noopener noreferrer">Telegram</a>
+      </div>
+    </div>
+
+    <div class="container copyright">© 2026 LingoUp. Учебный проект. Контакты и цены демонстрационные.</div>
+  </footer>
+
+</body>
+
+</html>
