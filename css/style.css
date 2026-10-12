@@ -1,0 +1,940 @@
+
+/* ==========================================
+   1. COLORS AND BASIC SETTINGS
+   ========================================== */
+
+:root {
+    --dark: #203047;
+    --green: #48b86a;
+    --green-dark: #228b4a;
+    --muted: #627384;
+    --bg: #f8fbf9;
+    --line: #dce9e2;
+    --soft: #e9f7ed;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Manrope, Arial, sans-serif;
+    color: var(--dark);
+    background: var(--bg);
+    line-height: 1.65;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Unbounded, Arial, sans-serif;
+    line-height: 1.3;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #ffc44d;
+    outline-offset: 3px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ==========================================
+   2. HEADER AND NAVIGATION
+   ========================================== */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: white;
+    border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-family: Unbounded, sans-serif;
+    color: var(--green-dark);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.nav-list {
+    display: flex;
+    gap: 36px;
+}
+
+.nav-link {
+    font-weight: 800;
+    padding: 8px 0;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    border-color: #ffbf43;
+}
+
+.header-action {
+    color: var(--green-dark);
+    font-weight: 800;
+}
+
+.burger-checkbox,
+.burger {
+    display: none;
+}
+
+
+/* ==========================================
+   3. BUTTONS
+   ========================================== */
+
+.button {
+    display: inline-block;
+    border: 0;
+    background: #ffc344;
+    color: var(--dark);
+    border-radius: 40px;
+    padding: 16px 30px;
+    font: 800 1rem Manrope, sans-serif;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.button:hover {
+    background: #ffb51d;
+    transform: translateY(-2px);
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--green-dark);
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+
+/* ==========================================
+   4. HERO SECTION
+   ========================================== */
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    padding: 85px 0;
+}
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.hero-text,
+.hero-art {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-title {
+    font-size: clamp(2.4rem, 4.2vw, 4rem);
+    margin-bottom: 24px;
+}
+
+.hero-title em {
+    color: var(--green-dark);
+    font-style: normal;
+}
+
+.hero-subtitle {
+    color: var(--muted);
+    font-size: 1.15rem;
+    max-width: 520px;
+    margin-bottom: 32px;
+}
+
+.hero-note {
+    margin-top: 24px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================
+   5. HERO ILLUSTRATION
+   ========================================== */
+
+.hero-art {
+    height: 390px;
+    position: relative;
+    background: linear-gradient(145deg, #d5f4df, #a9e4be);
+    border-radius: 36px;
+    overflow: hidden;
+}
+
+.art-sun {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    background: #ffce64;
+    border-radius: 50%;
+    right: 30px;
+    top: 28px;
+}
+
+.art-owl {
+    position: absolute;
+    font-size: 11rem;
+    left: 27%;
+    top: 22%;
+    filter: drop-shadow(0 12px 8px #5c9d7455);
+}
+
+.art-bubble {
+    position: absolute;
+    background: #fff;
+    border: 2px solid #d7ecdf;
+    border-radius: 20px;
+    padding: 12px 19px;
+    font-weight: 800;
+    box-shadow: 0 8px 20px #31694c25;
+}
+
+.art-hello {
+    top: 18%;
+    left: 8%;
+}
+
+.art-star {
+    right: 5%;
+    bottom: 16%;
+}
+
+.art-book {
+    position: absolute;
+    bottom: 12%;
+    left: 12%;
+    font-size: 3.5rem;
+}
+
+
+/* ==========================================
+   6. GENERAL SECTIONS
+   ========================================== */
+
+.section {
+    padding: 90px 0;
+}
+
+.section-light {
+    background: var(--soft);
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 38px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading .section-title {
+    margin-bottom: 12px;
+}
+
+.section-heading p,
+.muted {
+    color: var(--muted);
+}
+
+
+/* ==========================================
+   7. COURSE CARDS
+   ========================================== */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.card {
+    width: calc((100% - 48px) / 3);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-visual {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 6rem;
+}
+
+.card-visual span {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 3px 13px;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.mint {
+    background: #c8efda;
+}
+
+.peach {
+    background: #ffe0bc;
+}
+
+.lavender {
+    background: #ded9fa;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body h3 {
+    font-size: 1.08rem;
+    margin-bottom: 12px;
+}
+
+.card-body p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.card-body a {
+    font-weight: 800;
+    color: var(--green-dark);
+}
+
+
+/* ==========================================
+   8. FEATURES
+   ========================================== */
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.feature {
+    width: calc((100% - 84px) / 4);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 14px;
+}
+
+.feature h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: var(--muted);
+}
+
+
+/* ==========================================
+   9. PAGE HEADER
+   ========================================== */
+
+.page-header {
+    background: #d9f2e2;
+    padding: 72px 0;
+}
+
+.page-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    color: #4c665a;
+    font-size: 1.1rem;
+}
+
+
+/* ==========================================
+   10. LEARNING STEPS
+   ========================================== */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.step {
+    background: white;
+    border: 1px solid var(--line);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.step span {
+    font-family: Unbounded, sans-serif;
+    font-size: 2rem;
+    color: var(--green-dark);
+}
+
+.step h3 {
+    font-size: 1rem;
+    margin: 18px 0 10px;
+}
+
+.step p {
+    color: var(--muted);
+}
+
+
+/* ==========================================
+   11. COURSE DETAILS
+   ========================================== */
+
+.course-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 65px;
+    scroll-margin-top: 110px;
+}
+
+.course-row:last-child {
+    margin-bottom: 0;
+}
+
+.course-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.course-illustration,
+.course-copy {
+    flex: 1;
+    min-width: 0;
+}
+
+.course-illustration {
+    height: 300px;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 9rem;
+}
+
+.course-illustration small {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    font-size: 1rem;
+    font-family: Unbounded, sans-serif;
+    color: #344d42;
+}
+
+.course-copy h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.course-copy p {
+    color: var(--muted);
+}
+
+.course-copy ul {
+    margin: 20px 0 26px;
+}
+
+.course-copy li {
+    margin-bottom: 7px;
+}
+
+.course-copy li::before {
+    content: "✓ ";
+    color: var(--green-dark);
+    font-weight: 900;
+}
+
+
+/* ==========================================
+   12. COURSE TABLE
+   ========================================== */
+
+.table-wrap {
+    overflow-x: auto;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+}
+
+table {
+    width: 100%;
+    min-width: 680px;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--line);
+}
+
+th {
+    background: var(--green-dark);
+    color: white;
+}
+
+
+/* ==========================================
+   13. CONTACT PAGE
+   ========================================== */
+
+.contacts {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.contact-form {
+    flex: 2;
+}
+
+.contact-info {
+    flex: 1;
+    background: var(--soft);
+    padding: 32px;
+    border-radius: 22px;
+}
+
+.contact-form h2,
+.contact-info h2 {
+    font-size: 1.45rem;
+    margin-bottom: 12px;
+}
+
+.contact-form > .muted {
+    margin-bottom: 22px;
+}
+
+.form-row {
+    display: flex;
+    gap: 18px;
+}
+
+.form-field {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    display: block;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    border: 1px solid #c8d9d0;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font: 1rem Manrope, sans-serif;
+    background: white;
+    color: var(--dark);
+}
+
+.info-icon {
+    font-size: 3rem;
+}
+
+.contact-info p {
+    margin: 12px 0 25px;
+}
+
+.contact-info h3 {
+    font: 800 0.95rem Manrope, sans-serif;
+    margin-top: 22px;
+}
+
+.contact-info a {
+    display: block;
+    color: var(--green-dark);
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   14. FAQ SECTION
+   ========================================== */
+
+.faq {
+    max-width: 850px;
+    margin: auto;
+}
+
+.faq details {
+    background: #fff;
+    padding: 23px 28px;
+    border-radius: 15px;
+    margin-bottom: 14px;
+    border: 1px solid var(--line);
+}
+
+.faq summary {
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.faq p {
+    margin-top: 15px;
+    color: var(--muted);
+}
+
+
+/* ==========================================
+   15. FOOTER
+   ========================================== */
+
+.footer {
+    background: #203047;
+    color: #cbd6df;
+    padding: 55px 0 20px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 320px;
+}
+
+.footer .logo,
+.footer h3 {
+    color: white;
+}
+
+.footer h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.footer a:hover {
+    color: #ffc344;
+}
+
+.copyright {
+    border-top: 1px solid #405267;
+    margin-top: 45px;
+    padding-top: 18px;
+    font-size: 0.85rem;
+    color: #acbdc9;
+}
+
+
+/* ==========================================
+   16. TABLET RESPONSIVE DESIGN
+   Screens up to 1024px
+   ========================================== */
+
+@media (max-width: 1024px) {
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .hero-inner {
+        gap: 35px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .feature {
+        width: calc((100% - 28px) / 2);
+    }
+
+    .header-action {
+        display: none;
+    }
+
+    .course-row {
+        gap: 30px;
+    }
+
+}
+
+
+/* ==========================================
+   17. MOBILE RESPONSIVE DESIGN
+   Screens up to 767px
+   ========================================== */
+
+@media (max-width: 767px) {
+
+    /* Header */
+
+    .header-inner {
+        height: 68px;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    /* Burger menu */
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .burger span {
+        display: block;
+        width: 27px;
+        height: 3px;
+        border-radius: 2px;
+        background: var(--dark);
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 10px 20px #0001;
+    }
+
+    .nav-list {
+        width: 90%;
+        margin: auto;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0 20px;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 12px 0;
+    }
+
+    .burger-checkbox:checked ~ .nav {
+        display: block;
+    }
+
+    .burger-checkbox:checked + .burger span:first-child {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .burger-checkbox:checked + .burger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-checkbox:checked + .burger span:last-child {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* General sections */
+
+    .section {
+        padding: 48px 0;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+        padding: 50px 0;
+    }
+
+    .hero-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-art {
+        width: 100%;
+        flex: auto;
+        height: 300px;
+    }
+
+    .art-owl {
+        font-size: 8rem;
+        left: 25%;
+        top: 20%;
+    }
+
+    .art-book {
+        font-size: 2.5rem;
+    }
+
+    .art-bubble {
+        font-size: 0.8rem;
+    }
+
+    /* Cards and features */
+
+    .card,
+    .feature {
+        width: 100%;
+    }
+
+    /* Page header */
+
+    .page-header {
+        padding: 50px 0;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Learning steps */
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    /* Courses */
+
+    .course-row,
+    .course-row.reverse {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+        margin-bottom: 55px;
+    }
+
+    .course-illustration {
+        height: 240px;
+        flex: auto;
+        font-size: 7rem;
+    }
+
+    .course-copy h3 {
+        font-size: 1.25rem;
+    }
+
+    /* Contacts */
+
+    .contacts {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    .contact-info {
+        order: -1;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact-form .button {
+        width: 100%;
+    }
+
+    /* Footer */
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-col {
+        align-items: center;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+}
